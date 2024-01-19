@@ -1,7 +1,11 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
+    height: 100vh;
 }
 
 .container{
@@ -12,98 +16,114 @@
 }
 
 #nav-wrapper{
-    width: 97%;
+    width: 100%;
     height: 3rem;
     background-color: white;
     display: flex;
     justify-content: space-between;
-    margin: 1.5rem;
+    margin-right: 3rem;
+    margin-right: 3rem;
 }
 /* For site-name */
 #nav-wrapper span{
     color: black;
     padding-left:.8rem;
     padding-top: 25px;
+    margin-left: 4rem;
     
 }
+
+
 /* For menu-bars */
 .fa-bars{
     color: black;
     padding-right:2rem;
     padding-top: 25px;
-    
+    margin-right: 4rem;
 }
 
 .hero-section{
-    width: 97%;
+    width: 450px;
     height: 12rem;
+    margin-top: 7rem;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 15rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    position: relative;
 }
 
-.hero-section.intro{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.hero-section .intro{
+    display: block;
+    width:500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+   
 }
 
 .hero-section .skillz{
     background-color: aqua;
-    width: 100%;
-    height: 5rem;
-    
-  
+    width: 500px;
+    height: 2rem;
+    margin-left:12px;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 20px;
+    position: relative;
+    margin-top: 10px;
 }
 
-.hero-section .skillz span{
+.hero-section .skillz span, .intro span{
     font-size: 20px bold;
-    
-  
+    margin-left: 17rem;
 }
+
+.profile-picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
 
 .profile-picture img{
-    padding-top: 25px;
-    top: 500px;
-    left: 20px;
-    width: 250px;
-    height: 300px;
-    /* UI Properties */
-    opacity: 1;
-    background-repeat: no-repeat;
-    background-image: cover;
 
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    padding-left: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 10px;
+    left: 0;
+    float: left;
+    margin-top: 0;
+    
 }
 
-.content-section{
-    width:100%;
-    height:50vh;
-    margin: auto;
-    padding-top:25px;
-    text-align: center;
-    font-size: 20px;
-    color: aqua;
-    font-weight: 100;
+.content-section {
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50vh; /* Adjust this value for vertical centering */
+    color: white;
     background-image: url(images/component2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
 }
 
-.content-section .header h4{
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 100;
+.content-section .info{
+    
+    display: block;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
 }
 
-.content-section .header hr{
-    height: 2px;
-    width: 50px;
-    padding: left 2px;;
-    color: white;
-}
 
 /* For Mobile Portrait View */
 @media screen and (max-device-width: 480px) 
@@ -119,23 +139,36 @@
     .hero-section{
         width: 100%;
         height: 15rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
+        padding-top: 40px;
+    }
+
+    .profile-picture img{
+        width: 230px;
+        height: 230px;
+        padding: 10px;
+
+    
     }
 
     .hero-section .skillz{
         width: 90%;
         height: 12rem;
+        top:50px;
         margin-left: 1rem;
         height: 2rem;
         padding: .2rem;
        
         
     }
-    .content-section{
-        width: 90%;
-        height: 20rem;
-        margin-left: 1rem;
-        font-size: 2.5rem;
-       
+
+    .content-section .content-section-info{
+        width:100%;
+        gap: 10px;
+        flex-wrap: wrap;
+        height: fit-content;
     }
 }

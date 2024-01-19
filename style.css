@@ -22,15 +22,14 @@ body {
     display: flex;
     justify-content: space-between;
     margin-right: 3rem;
-    margin-right: 3rem;
+    margin-left: 3rem;
 }
 
 /* For site-name */
 #nav-wrapper span {
     color: black;
-    padding-left: .8rem;
     padding-top: 25px;
-    margin-left: 4rem;
+    margin-left: 2rem;
 
 }
 
@@ -44,7 +43,7 @@ body {
 }
 
 .hero-section {
-    width: 450px;
+    width: 500px;
     height: 12rem;
     margin-top: 7rem;
     background-color: white;
@@ -55,7 +54,9 @@ body {
 }
 
 .hero-section .intro {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 500px;
     margin-left: auto;
     margin-right: auto;
@@ -66,65 +67,112 @@ body {
 
 .hero-section .skillz {
     background-color: aqua;
+    text-align: center;
     width: 500px;
     height: 2rem;
-    margin-left: 12px;
+    display: block;
     margin-right: auto;
-    text-align: center;
-    padding-left: 20px;
     position: relative;
     margin-top: 10px;
 }
 
-.hero-section .skillz span,
+.skillz span{
+
+    font-size: 10px bold;
+    text-align: center;
+    color: black;
+    font-weight: 300;
+    padding-top: 5px;
+    padding: 10px;
+
+}
+
 .intro span {
-    font-size: 20px bold;
-    margin-left: 17rem;
+    font-size: 30px bold;
+    text-align: center;
+    color: black;
+    font-weight: 300;
+
 }
 
 .profile-picture {
     position: absolute;
     top: 0;
-    left: 0;
+    left: .1rem;
     z-index: 1;
 }
 
 
 .profile-picture img {
-
-    width: 200px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     position: absolute;
-    padding-left: 15px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    top: 10px;
-    left: 0;
+    margin-left: 30px;
+    padding-top: 1px;
     float: left;
-    margin-top: 0;
 
 }
 
-.content-section {
-    width: 800px;
+/* .content-section {
+    width: 100%;
+    height: fit-content;
     display: flex;
     justify-content: center;
-    margin-top: 50vh;
-    /* Adjust this value for vertical centering */
-    color: white;
+    flex-direction: row;
+    margin-top: 10rem;
     background-image: url(images/component2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
+    color: white;
+} */
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(images/component2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    color: white;
+
+    margin-right: 3rem;
+    margin-left: 3rem;
 }
 
-.content-section .info {
-    display: block;
-    width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 10px;
+.content-section-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
 }
+
+.column {
+    flex: 1;
+    margin: 0 1rem;
+    text-align: center;
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 8px;
+    color: white;
+}
+
+/* 
+.Design {
+     margin-right: 3rem;
+    margin-right: 3rem;
+}
+
+.E-Commerce {
+    background-color: #2ecc71;
+}
+
+.Wordpress {
+    background-color: #e74c3c;
+} */
+
 
 
 /* For Mobile Portrait View */
